@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenadores</title>
+    <link rel="stylesheet" href="{% static 'entrenadores/css/lista.css' %}">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Entrenadores</h1>
+
+        {% if error %}
+            <p class="mensaje-error" role="alert">{{ error }}</p>
+        {% endif %}
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Especialidad</th>
+                        <th scope="col">Años de experiencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entrenador in entrenadores %}
+                        <tr>
+                            <td>{{ entrenador.entrenador_id }}</td>
+                            <td>{{ entrenador.nombre }}</td>
+                            <td>{{ entrenador.especialidad }}</td>
+                            <td>{{ entrenador.anios_experiencia }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="4" class="sin-resultados">No hay entrenadores disponibles.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

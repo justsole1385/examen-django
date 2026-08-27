@@ -1,0 +1,59 @@
+:root {
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: #f4f7fb;
+}
+
+body {
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    margin-bottom: 1.25rem;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.12);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.mensaje-error {
+    padding: 0.9rem 1rem;
+    color: #991b1b;
+    background: #fee2e2;
+    border-radius: 6px;
+}
+
+.sin-resultados {
+    color: #6b7280;
+    text-align: center;
+}
